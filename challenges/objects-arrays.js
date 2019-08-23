@@ -115,7 +115,7 @@ console.log(contactInfo);
 let unisWithUni = [];
 
 unisWithUni = graduates.filter(function(item){
-  return item.university === 'Uni';
+  return item.university.includes('Uni');
 });
 
 console.log(unisWithUni);
