@@ -93,6 +93,8 @@ graduates.forEach(function(items){
   return universities.push(`${items.university}`)
 });
 
+universities.sort()
+
 console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
