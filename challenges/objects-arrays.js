@@ -7,28 +7,64 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
+function weight() {
+  console.log(this.weight)
+}
 
+function rawr(){
+  console.log(this.rawr);
+}
+
+let tyrannosaurus = {
+  name: 'tyrannosaurus',
+  diet: 'carnivorous',
+  weight: '7000kg',
+  length: '12m',
+  period: 'Late Cretaceous',
+  rawr: 'RAWERSRARARWERSARARARRRR!',
+  live: function(){ 
+    console.log(this.period);
+  }
+}
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
+let stegosaurus = {
+  name: 'stegasaurus',
+  diet: 'herbivorous',
+  weight: '2000kg',
+  length: '9m',
+  period: 'Late Jurassic',
+  food: function() {
+    console.log(this.diet);
+  }
+}
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
-
+let velociraptor = {
+  name: 'velociraptor',
+  diet: 'carnivorous',
+  weight: '15kg',
+  length: '1.8m',
+  period: 'Late Cretaceous',
+  long: function() {
+    console.log(this.length);
+  }
+}
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+weight.call(tyrannosaurus);
 
 // What was the diet of a velociraptor?
-console.log();
+stegosaurus.food();
 
 // How long was a stegosaurus?
-console.log();
+velociraptor.long();
 
 // What time period did tyrannosaurus live in?
-console.log();
+tyrannosaurus.live();
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+rawr.call(tyrannosaurus);
 
 
 // ==== Arrays ====
@@ -52,6 +88,11 @@ const graduates = [
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+
+graduates.forEach(function(items){
+  return universities.push(`${items.university}`)
+});
+
 console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
@@ -61,6 +102,11 @@ The resulting contact information strings should have a space between the first 
 
 Log the result of your new array. */
 const contactInfo = [];
+
+graduates.forEach(function(items){
+  return contactInfo.push(`${items.first_name} ${items.email}`)
+});
+
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
