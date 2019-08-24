@@ -23,20 +23,35 @@ You will notice there are several JavaScript files being brought into the index.
 In meeting the minimum viable product (MVP) specifications listed below, you should have a console full of correct responses to the problems given.
 
 ## Self-Study Questions
-
 Demonstrate your understanding of this week's concepts by answering the following free-form questions.
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+`.map` returns a new array based on the specific items you want it to search for in the array it is searching. `.forEach` executes a specific function on each item in the array that you assign it to.
+
 2. What is the difference between a function and a method?
+
+a function is the part that holds all of the information and a method is something that can be outputted or console logged
 
 3. What is closure?
 
+a closure is a function that calls another function inside of itself
+
 4. Describe the four rules of the 'this' keyword.
 
+window binding - is the default principle and means that the 'this' keyword reflects on the global scope
+
+implicit binding - the most common principle to use. When a function is invoked, it will look to the left of the dot to see what the keyword is reffering to.
+
+new binding - uses the new keyword to construct a new object, and uses 'this' to point to it
+
+explicit binding - we can tell the JS engine to point to a explicit value using call, apply, or bind and will also use one of these properties to invoke a function with a specific value
+
 5. Why do we need super() in an extended class?
+
+`super()` is the special sauce that holds all of the classes together and makes sure that all of the properties in the parent class get passed down to the child class.
 
 ## Project Set up
 
